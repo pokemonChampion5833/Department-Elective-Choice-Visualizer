@@ -8,7 +8,7 @@ class DataReader():
         self.sections=dict()
         self.electiveNames=OrderedDict({'IT1654':'Data Science','IT1653':'A.I','CS1653':'Cloud Computing','CS1650':'Distributed Databases','CC1653':'Internet Of Things','CC1652':'Advanced Internet Technologies','CC1654':'Principles of Software Engineering'})
 
-    #method which will read the excel files and construct a histogram
+    #method which will read the excel files and construct a bar-chart
     def readExcelFile(self,filename):
         allSheets=pd.concat(pd.read_excel('{}.xlsx'.format(filename),sheet_name=None))
         allSheets=allSheets.dropna()
